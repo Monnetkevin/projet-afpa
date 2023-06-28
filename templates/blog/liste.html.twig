@@ -1,0 +1,28 @@
+{% extends 'layout.html.twig' %}
+
+{% block main %}
+    <div class="title">
+        <h1>Les derniers Articles</h1>
+    </div>
+        <div class="container">
+            <div class="row">
+
+        {% for article in articles %}
+        <div class="col-md-3" >
+            <div class="card text-center" id="cadre_article">
+                <img class="card-img-top" src="{{ asset('images/blog/' ~ article.image ) }}" alt="{{ article.titre }}">
+                <div class="card-body">
+                    <h5>{{ article.titre }}</h5>
+                    <a href="{{ path('article_detail', {'id': article.id}) }}" id="btn_detail" type="button" class="btn btn-primary btn-sm">Plus de détail</a>
+                </div>
+                <footer class="blockquote-footer">{{ article.auteur }} Le <cite title="{{ article.auteur }}">{{ article.dateCreated|date( " d-m-Y à H:i ") }}</cite></footer>
+            </div>
+        </div>
+
+        {% endfor %}
+
+    </div>
+        </div>
+{% endblock %}
+
+{% block title %} {{ parent() }}{% endblock %}

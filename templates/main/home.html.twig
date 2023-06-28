@@ -1,0 +1,112 @@
+{% extends 'layout.html.twig' %}
+
+{% block main %}
+    <div class="title">
+        <h1> Technicien Supérieur de Support en Informatique </h1>
+    </div>
+    <div class="row" id="cadre_home">
+        <div class="col-md-6 offset-1">
+            <img src="{{ asset('images/TSRIT-640x480.jpg') }}" width="100%">
+        </div>
+        <div class="col-md-4">
+            <div class="info_formation">
+                <div class="info_duree">
+                    <img src="{{ asset('images/clock.png') }}" alt="image duree" width="10%">
+                    <h3> Durée : </h3><br>
+                    <b> 9 mois et demi environ (1 295 heures).</b>
+                    <p>Durées indicatives et ajustables en fonction des besoins des personnes.</p>
+                </div>
+                <div class="info_diplome">
+                    <img src="{{ asset('images/diplome.png') }}" alt="image diplome" width="10%">
+                    <h3>Titre visé : </h3><br>
+                    <p>Titre professionnel de niveau III (BTS/DUT) de technicien/ne supérieur/e de support en
+                        informatique.</p>
+                </div>
+
+            </div>
+            <div class="info_debouche">
+                <h3>Les débouchés :</h3>
+                <p>Vous pouvez évoluer vers les métiers de :
+                    Évolution de l’emploi vers : expert technique (support de 3e niveau), administrateur système et
+                    réseau, gestionnaire de parc informatique, superviseur de plate-forme de help desk, responsable de
+                    service informatique, ingénieur technico-commercial.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="row" id="cadre_home2">
+        <div class="col-md-6 offset-1">
+            <div class="text_home2">
+                <p>La formation de technicien (ne) supérieur (e) de support en informatique diagnostique et assure la
+                    résolution d’incidents simples ou complexes jusqu’à leur clôture et effectue des installations,
+                    des déploiements ou des dépannages.</p>
+                <p> Le (la) technicien(ne) supérieur(e) de support en informatique (TSSI) intervient ou déclenche une
+                    intervention sur des systèmes
+                    informatiques, à distance ou sur site, afin d’apporter une solution à des utilisateurs ou à des
+                    professionnels de l’informatique,
+                    dans les conditions spécifiées par le contrat de service.</p>
+
+                <p>Certaines documentations de référence sont en anglais, ce qui nécessite de lire et de comprendre le
+                    sens
+                    global de l’anglais technique. Enfin, lors de ses moments libres, le technicien s’auto-forme en
+                    utilisant
+                    tous les moyens à sa disposition et en testant les nouveaux produits logiciels.Autres appellations
+                    de l’emploi-type :
+                </p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <img src="{{ asset('images/image_home2.jpg') }}" alt="image home" width="100%">
+        </div>
+    </div>
+
+    <div class="col-md-8 offset-md-2 info_competence">
+        <h3 class="titre_competence">Voici les activités réalisées pendant la formation et les compétences requises</h3>
+        <hr>
+        <div class="competence1">
+            <h5><i class="fa fa-plus icone_plus" id="icone_competence1"></i>AT1 – Intervenir et assister en centre de
+                services sur l’environnement de travail utilisateur</h5>
+            <div class="panel_competence1">
+                <p>Gérer les incidents et les problèmes</p>
+                <p>Configurer et mettre à jour un poste de travail informatique</p>
+                <p>Configurer la connexion physique et logique du poste de travail</p>
+                <p>Assister les utilisateurs</p>
+                <p>Utiliser l’anglais dans son activité professionnelle en informatique</p>
+            </div>
+        </div>
+        <div class="competence2">
+            <h5><i class="fa fa-plus icone_plus" id="icone_competence2"></i>AT2 – Intervenir et assurer le support sur
+                les
+                systemes et les reseaux informatiques</h5>
+            <div class="panel_competence2">
+                <p>Intervenir sur une infrastructure de réseau TCP/IP</p>
+                <p>Intervenir sur une infrastructure de réseau sécurisé</p>
+                <p>Administrer et dépanner un serveur</p>
+                <p>Intervenir sur un service d’annuaire de réseau</p>
+                <p>Automatiser des tâches à l’aide de scripts</p>
+                <p>Déployer des postes de travail sur un réseau d’entreprise</p>
+            </div>
+        </div>
+        <div class="competence3">
+            <h5><i class="fa fa-plus icone_plus" id="icone_competence3" aria-hidden="true"></i>AT3 – Intervenir et
+                assurer le support sur les
+                serveurs d’applications</h5>
+            <div class="panel_competence3">
+                <p>Utiliser un outil de gestion d’environnements virtuels</p>
+                <p>Intervenir sur un serveur de clients légers</p>
+                <p>Intervenir sur un système de messagerie informatique</p>
+                <p>Intervenir sur une architecture n-tiers</p>
+                <p>Suivre les indicateurs de qualité de service et la relation client</p>
+                <p>Assurer sa veille technologique en informatique</p>
+            </div>
+        </div>
+    </div>
+
+ <script type="text/javascript">
+     $(document).ready(function () {
+         $("#icone_competence1").click(function () {
+             $(".panel_competence1").slideToggle();
+         })
+     })
+ </script>
+{% endblock %}

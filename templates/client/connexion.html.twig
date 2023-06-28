@@ -1,0 +1,48 @@
+{% extends 'layout.html.twig' %}
+
+{% block main %}
+    <div class="container" id="container_cadre">
+        <div class="titre_">
+            <h1> S'identifier</h1>
+        </div>
+        <div class="row">
+            <div class="col-md-4 offset-md-1 cadre" id="cadre_inscription">
+                <h3>Pas encore de compte ?</h3>
+                <p>Découvrez un espace pour vous </p>
+                <a href="{{ path('inscription') }}" id="btn_inscription" type="button" class="btn btn-sm btn-danger">Inscription</a>
+            </div>
+            <div class="col-md-4 offset-md-2 cadre" id="cadre_connexion">
+                <form action="{{ path('app_login') }}" method="post">
+                    <h3> Vous avez déjà un compte ?</h3>
+                    <p> Connectez-vous pour bénéficier de l'ensemble des services.</p>
+
+                    <div class="form">
+                        <input class="form-control" id="email" name="email" type="email" placeholder="E-mail"
+                               value="{{ last_username }}" required/>
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control " id="password" name="password" type="password"
+                               placeholder="Mot de passe" required/>
+                    </div>
+                    <input type="hidden" name="_csrf_token"
+                           value="{{ csrf_token('authenticate') }}">
+
+                    <div class="checkbox mb-3">
+                        <label>
+                            <input type="checkbox" name="_remember_me"> Se souvenir
+                        </label>
+                    </div>
+                    {% if error %}
+                        <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+                    {% endif %}
+                    <button id="btn_connexion" type="submit" class="btn btn-danger btn-sm">Connexion</button>
+                </form>
+                <div id="mot_de_passe">
+                    <a href="#"> Mot de passe oublié</a>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block title %}Connexion | {{ parent() }}{% endblock %}

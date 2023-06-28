@@ -1,0 +1,213 @@
+/**
+BODY
+ */
+#container_body {
+    background-color: #f1f1f1;
+    padding-bottom: 30px;
+}
+
+.flashes .flash {
+    padding: 20px;
+    background-color: dodgerblue;
+    color: white;
+    font-size: 24px;
+    margin: 10px 0;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.flashes .flash-error {
+    background-color: #AA3333;
+}
+/**
+HEADER
+ */
+@media (max-width: 765px){
+    #banniere {
+        text-align: center;
+    }
+    .image_user{
+        width: 20%;}
+}
+
+#banniere {
+    margin-top: 15px;
+}
+
+header img {
+    margin-bottom: 20px;
+}
+#menu li a {
+    display: block;
+    padding: 5px 8px;
+    margin-right: 10px;
+    color: white;
+}
+header nav ul {
+    margin: 5px 0;
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+}
+header nav{
+    background-color: #87bb34;
+}
+
+/**
+HOME
+ */
+
+.title h1{
+    text-align: center;
+    padding-top: 50px;
+    margin-bottom: 75px;
+}
+
+.text_home2 p {
+    text-align: -webkit-center;
+    padding-top: 50px;
+    margin: 0 0 25px;
+}
+
+.info_formation {
+    background-color: #87bb34;
+    padding: 25px;
+}
+
+.info_duree h3, .info_duree p, .info_duree b, .info_diplome h3, .info_diplome p, .info_debouche p {
+    padding-left: 20px;
+    color: black;
+}
+
+.info_duree img, .info_diplome img {
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 10px;
+}
+
+.info_debouche {
+    background-color: white;
+    margin-top: 15px;
+    padding: 20px;
+}
+
+#cadre_home2 {
+    padding-top: 50px;
+}
+
+.info_competence {
+    text-align: center;
+}
+.titre_competence {
+    padding-bottom: 25px;
+    padding-top: 50px;
+}
+.info_competence hr {
+    background-color: #87bb34 ;
+}
+.competence1 h5, .competence2 h5, .competence3 h5 {
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+
+.icone_plus {
+    margin-right: 10px;
+}
+
+/**
+PAGE CONNEXION
+ */
+
+.cadre {
+    padding: 15px 15px 10px ;
+    width: 334px;
+    min-height: 350px;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.cadre h3 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.cadre p {
+    font-size: 1.2rem;
+    font-family: raleway-regular;
+    font-weight: normal;
+
+}
+#cadre_connexion  {
+    background-color: #00a0e0;
+    padding: 30px;
+    color: white;
+}
+
+.titre_ h1{
+    text-align: center;
+    margin-bottom: 3rem;
+}
+#email {
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+#mot_de_passe  {
+    margin-top: 15px;
+    text-align: right;
+}
+#mot_de_passe a {
+    color: white;
+}
+
+#container_cadre {
+   padding-bottom: 5rem;
+}
+
+#cadre_inscription {
+    background-color: white;
+    padding: 30px;
+}
+
+#cadre_inscription a {
+    margin-top: 225px;
+}
+
+#titre_inscr h2 {
+    padding: 40px;
+}
+.image_user{
+
+}
+
+/**
+ARTICLE
+ */
+
+#cadre_article {
+    margin-bottom: 35px;
+
+}
+
+#detail_article h5{
+    text-align: center;
+}
+
+/**
+CONTACT
+ */
+
+.contact {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+
+}
+
+
+/**
+FOOTER
+ */
+
+footer {
+    text-align: center;
+
+}

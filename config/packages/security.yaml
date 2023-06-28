@@ -1,0 +1,40 @@
+security:
+    # encoder
+    encoders:
+        App\Entity\User:
+            algorithm: bcrypt
+
+    providers:
+        our_db_provider:
+            entity:
+                class: App\Entity\User
+                property: email
+
+    firewalls:
+        main:
+            pattern:    ^/
+            provider: our_db_provider
+            anonymous: ~
+            form_login:
+                login_path: login
+                check_path: login
+            logout_on_user_change: true
+            logout:
+                path: logout
+                target: /
+            guard:
+                authenticators:
+                    - App\Security\LoginFormAuthenticator
+            remember_me :
+                secret: '%kernel.secret%'
+                lifetime: 2592000
+
+        dev:
+            pattern: ^/(_(profiler|wdt)|css|images|js)/
+            security: false
+
+    access_control:
+        # - { path: ^/admin, roles: ROLE_ADMIN }
+        # - { path: ^/profile, roles: ROLE_USER }
+        - { path: ^/connexion$, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: /add, roles: ROLE_USER}
